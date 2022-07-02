@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Command Pattern with Spring Boot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+    <body>
+        <form action="#" method="post" th:action="@{/edit}" th:object="${command}">
+            <p>Message: <input type="text" th:field="*{content}" /></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+        <h3>Command History</h3>
+        <p th:utext="${history}"></p>
+    </body>
+</html>
